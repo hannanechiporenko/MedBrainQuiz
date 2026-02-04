@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Test: Gehirnstruktur</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .image-wrapper img {
+      max-width: 500px;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+
+    .panel {
+      background-color: #f0f0f0;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .panel h3 {
+      margin-top: 0;
+    }
+
+    .panel button.option {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .panel button.option.correct {
+      background-color: lightgreen;
+    }
+
+    .panel button.option.wrong {
+      background-color: lightcoral;
+    }
+
+    #next {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Links: Abbildung des Gehirns -->
+  <div class="image-wrapper">
+    <img src="brain.png" alt="Gehirn">
+  </div>
+
+  <!-- Rechts: Fragenfeld -->
+  <div class="panel">
+    <h3 id="question">Frage</h3>
+    <div id="options"></div>
+    <p id="result"></p>
+    <button id="next">Nächste</button>
+  </div>
+
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
